@@ -3,65 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
+    <title>Malik Murithi - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="home.js">
 </head>
-<body >
-    <header>
-        <h1>Hello! I'm Malik Murithi</h1>
-    </header>
-    <section>
-        <nav> 
-        </nav>
-   <article>
-    <section id="home">
-        <h2>Home</h2>
-        <p>Welcome to my portfolio website! I am 12 years old and I love coding, football, and learning new things. This is a place where I share the fun projects I've made using HTML, Python, and Scratch. Take a look around and enjoy!</p>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a young coder with big dreams! I enjoy building websites, creating fun programs, and exploring the world of technology. In my free time, I also enjoy reading The Dairy of the Wimpy Kid and playing football.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Car Dealership</li>
-            <li>Chat Bot (Python)</li>
-            <li>Space Adventure Game</li>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Malik Murithi</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form onsubmit="submitForm(event)">
-            <div class="form-group">
-                <label for="name">Your name:</label>
-                <input type="text" id="name" required>
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hello! I'm Malik Murithi</h1>
+            <p class="hero-text">Young Developer & Tech Enthusiast</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to my portfolio website! I am 12 years old and I love coding, football, and learning new things. I enjoy building websites, creating fun programs, and exploring the world of technology.</p>
+                    <p>In my free time, I also enjoy reading The Diary of the Wimpy Kid and playing football. I'm passionate about:</p>
+                    <ul class="skills-list">
+                        <li>Web Development (HTML, CSS, JavaScript)</li>
+                        <li>Python Programming</li>
+                        <li>Game Development with Scratch</li>
+                    </ul>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Your email:</label>
-                <input type="email" id="email" required>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Car Dealership</h3>
+                    <p>A web application for managing car inventory and sales.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Chat Bot</h3>
+                    <p>An interactive chatbot built with Python that can answer questions.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Space Adventure Game</h3>
+                    <p>An exciting space exploration game with multiple levels.</p>
+                    <div class="project-tags">
+                        <span>Scratch</span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="message">Your Message:</label>
-                <textarea id="message" rows="2" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-        </form>
-        <p id="response" style="color: green; font-weight: bold;"></p>
-        <script>
-            
-        </script>
-    </section>
-   </article>
-    </section>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Get In Touch</h2>
+            <form id="contact-form" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <p id="response" class="form-response"></p>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2025 Malik's Portfolio</p>
+        <div class="footer-content">
+            <p>© 2025 Malik Murithi</p>
+            <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Scratch</a>
+            </div>
+        </div>
     </footer>
-</body>
 
+    <script src="home.js"></script>
+</body>
 </html>
